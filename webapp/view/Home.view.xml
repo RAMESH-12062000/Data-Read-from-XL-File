@@ -21,16 +21,38 @@
                                 />
                             </contentMiddle>
                             <contentRight>
-                                <!-- <Button
-                                    id="idAddBtn"
-                                    type="Transparent"
+                                <Button
+                                    id="editButton"
+                                    text="Edit"
+                                    press="onEditPressBtn"
+                                />
+                                <Button
+                                    id="saveButton"
+                                    text="Save"
+                                    visible="false"
+                                    press="onSaveBtnPress"
+                                />
+                                <Button
+                                    id="cancelButton"
+                                    text="Cancel"
+                                    visible="false"
+                                    press="onCancelBtnPress"
+                                />
+                                <Button
+                                    id="idAddbtn"
+                                    tooltip="Add a Row"
                                     icon="sap-icon://add"
-                                /> -->
+                                    press="onAddBtnPress"
+                                />
                                 <Button
                                     id="idClearBtn"
                                     text="Clear"
-                                    type="Transparent"
-                                    press="onClearPressData"
+                                    press="onClear"
+                                />
+                                <Button
+                                    id="idDeleteBtn"
+                                    icon="sap-icon://delete"
+                                    press="onPressDeleteBtn"
                                 />
                                 <u:FileUploader
                                     id="FileUploaderId"
@@ -47,11 +69,9 @@
                         </Bar>
                     </customHeader>
                     <content>
-                        <Table
-                            id="dynamicTable"
+                        <Table id="idDynamicTable" mode="SingleSelectLeft">
+                            <!-- <columns>
                             items="{localModel>/items}"
-                        >
-                            <columns>
                                 <Column id="_IDGenColumn1">
                                     <Label
                                         id="_IDGenLabel2"
@@ -98,7 +118,7 @@
                                         />
                                     </cells>
                                 </ColumnListItem>
-                            </items>
+                            </items> -->
                         </Table>
                     </content>
                 </Page>
